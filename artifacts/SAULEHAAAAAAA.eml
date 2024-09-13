@@ -1,0 +1,89 @@
+Delivered-To: chaitanyabagul07@gmail.com
+Received: by 2002:adf:e683:0:b0:35f:2377:f70a with SMTP id r3csp28222wrm;
+        Wed, 4 Sep 2024 01:04:11 -0700 (PDT)
+X-Received: by 2002:a05:6358:7e89:b0:1aa:d5c8:ec94 with SMTP id e5c5f4694b2df-1b7ef777c55mr1755952655d.26.1725437051310;
+        Wed, 04 Sep 2024 01:04:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1725437051; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WtwYbHSNsUnMP37sgBYdfQWl+SiCa2aX5ntb/B+yQ6QI8HIaVR2Zgk7iBA8PD1vnjF
+         utD//rwMWet9FV/WDr/J+Wt61+tKZixJUk2k9sBl9LCVpNnTEs1IcxIA9Wldvvr2zEBd
+         fk1GJ1TNf+SN9OEdmgIp2UdM1LRB7clM3WGyZgLSElWORqFhtz8fZhT0aDhLepJVZ0VZ
+         zUOBT1JEVYRpffnsf4tz2il5BORvqt0WQCzq2ATVyB7/vw+RTwFKlhlgu1jqEikEOldY
+         ikIftmLRc+tyzwEks+k+fGDKn8ri9Uzg/E6+uq6bu3ugjDmuzqIj0MAiHdq0bQgshOLm
+         QbaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=tihWBHyi2ADPrzs0jA3H8cUh7RyKs06H0yTU/mKlg3c=;
+        fh=rlPO8M1SOrBayhEj1LFpGGN5+EFCWR6/3qCDT6LMsHY=;
+        b=tzyx7z0DkABeBsq5AEnRVFB3c2VYHLJ/Wf0Q6dyvgFxrXCVZX+/4OVZCRYxgKdoO+s
+         JTysASldyx61w1KKN8zWrA6ttFUasZ+5qYY76hIzAe+zwnGplserho2ocExYBENM14h0
+         G68auGIv5hhJVxvQ3NSX9UlopzpA3SHjtrkkpV/0mgFisfoZT6gYaatE2H5OOeckCikS
+         +aEpVo8b2U0YJWUalwI4ADBMbQASHggo2EcYijTY0rFbOQ8Ip5GyskCP696MVf18Ciyl
+         d2UpPhN4komeLtDvmiOA5SEoHsfMZRMdDsI1/mhK1Pi8Q1EHPmJRl63HyE3Hp3LYY6a/
+         k5rQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LJGDAcJk;
+       spf=pass (google.com: domain of khansauleha08@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=khansauleha08@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <khansauleha08@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 41be03b00d2f7-7d22e72e78fsor5460493a12.2.2024.09.04.01.04.10
+        for <chaitanyabagul07@gmail.com>
+        (Google Transport Security);
+        Wed, 04 Sep 2024 01:04:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of khansauleha08@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LJGDAcJk;
+       spf=pass (google.com: domain of khansauleha08@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=khansauleha08@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1725437050; x=1726041850; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=tihWBHyi2ADPrzs0jA3H8cUh7RyKs06H0yTU/mKlg3c=;
+        b=LJGDAcJkIceHZcSpEGhHw8L3QCYCM4cIzhAf7kwD/cR2K9hMNkd9KrW4Jl1v5YZwdw
+         dfZIU5R03cQQIEodP95Yg/RA7HgfHSv9V40LxyhFc1FDjlKwWYuZBX7+sHadXMTDGfV+
+         kGu1EjGLpv1+TI28tI4G88qV8Rz3mT0vVXPcudkWKMv9AmHOFQoZ71IWujrtw2L7mIqg
+         xSt1taZJO8Cxli3ZOedGKwpqXC5EeQGa3kcpelFMSWCDpWC0G5ZWvDDNdEBkHFobiaAk
+         Jin7IyazdoPJUGJnN8ylx9I+mtjwcYESYAxCz8qaOxZTmnl+FNaQAWqUgrC7N+SldZGe
+         XSsA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1725437050; x=1726041850;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=tihWBHyi2ADPrzs0jA3H8cUh7RyKs06H0yTU/mKlg3c=;
+        b=hC+nOgF9tTqJVKC/dhXmGgcE5eOd53KFCBNPrQult+obML9kRiZYiTRL+Ob64sYsq6
+         QrpLBv2jLzlH4nGa1LlL7UDAVAf4Xn+KEeWomONj84C1Q+mhBhKdwVX1k141KjCr1U0S
+         fa7hqSyiqRGGOhtoU46cA+K8mzwAWcvOLd98UonMkt9xm/00psojg/zYUOZ8rYqwS5tm
+         KebxPvNrXZnu2zQau2HX/SsUMp/N2KFL0hOqLPSJpuzGTaFHk5JMPBTKszVJj+0iRXpo
+         2+7O3lEcZgev63QslCzjVJ4pYDm+PM2mdmT/hqpbFpeQ8VQ73Wec5F8voZPiVxP6sYfK
+         LKXw==
+X-Gm-Message-State: AOJu0YwRJQEp36xPBVr2/jacrT2k/3vt2Uqwo64oU3GsrJzH+6am4Mfe
+	ssbHn4hQfyBFNd2mqj/pM+PQr0zT2BADLdTb0Pkr+rtOzAnf9/wkl+QDCmQP8gZKsNZtWcyZU+5
+	OFgbcCVfDoEkLm122XOo22ch9Fb3FE9+q
+X-Google-Smtp-Source: AGHT+IGr12xsquJ/HwFnC/UJfVLnPWdR7ljiQlBKBiBjw4hSCixgCtc+AsItA8vFIRnSL5heXM9q32EhwjHe5COxF/8=
+X-Received: by 2002:a05:6a20:b40a:b0:1ce:f77a:67e5 with SMTP id
+ adf61e73a8af0-1cef77a69f1mr6864490637.47.1725437050144; Wed, 04 Sep 2024
+ 01:04:10 -0700 (PDT)
+MIME-Version: 1.0
+From: Sauleha Khan <khansauleha08@gmail.com>
+Date: Wed, 4 Sep 2024 13:33:59 +0530
+Message-ID: <CACsEZOTSPz8bhqkdy-RhmpSwgjaDDdDZHVQ-hEp85=se7n5BeA@mail.gmail.com>
+Subject: SAULEHAAAAAAA
+To: Chaitanya Bagul <chaitanyabagul07@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000074cf4b0621469e8a"
+
+--00000000000074cf4b0621469e8a
+Content-Type: text/plain; charset="UTF-8"
+
+Call karooo
+
+--00000000000074cf4b0621469e8a
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Call karooo</div>
+
+--00000000000074cf4b0621469e8a--
